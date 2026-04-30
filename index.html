@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Solo or Duo!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script></head>
+<body>
+
+    <main>
+        <button id="themeToggleBtn" aria-label="Toggle Dark Mode" class="theme-toggle">🌙</button>
+
+        <section id="main-menu-screen">
+            <div class="logo-box">
+                <h1>X<span>O</span></h1>
+            </div>
+            <h1 class="main-title">Tic-Tac-Toe</h1>
+            
+            <div class="menu-buttons">
+                <button id="soloBtn" class="menu-btn"><span class="icon">👤</span> Play Solo</button>
+                <button id="duoBtn" class="menu-btn"><span class="icon">👥</span> Play with a friend</button>
+                <button id="rulesBtn" class="menu-btn rules-btn">Game Rules</button>
+            </div>
+        </section>
+
+        <!-- Game Rules Screen  -->
+        <section id="rules-screen" class="hidden">
+            <div class="screen-header">
+                <button id="backFromRulesBtn" class="back-btn">←</button>
+                <h2>Game Rules</h2>
+            </div>
+            
+            <div class="rules-list">
+                <div class="rule-item">
+                    <div class="rule-icon">🏆</div>
+                    <div class="rule-text">
+                        <h4>WIN</h4>
+                        <p>Get matching marks in a row. Player wins, game ends.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-icon">👎</div>
+                    <div class="rule-text">
+                        <h4>DEFEAT</h4>
+                        <p>Opponent gets matching marks in a row. Player loses, game ends.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-icon">🤝</div>
+                    <div class="rule-text">
+                        <h4>DRAW</h4>
+                        <p>Board full, no winning lines. No winner, game ends.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Configuration Screen -->
+        <section id="config-screen" class="hidden">
+            <div class="screen-header">
+                <button id="backFromConfigBtn" class="back-btn">←</button>
+                <h2>Game Setup</h2>
+            </div>
+
+            <div id="player-setup">
+                <input type="text" id="playerXName" placeholder="Enter Player X Name" aria-label="Player X Name">
+                <input type="text" id="playerOName" placeholder="Enter Player O Name" aria-label="Player O Name">
+                
+                <div class="grid-selection">
+                    <label for="gridSize">Select Grid Size:</label>
+                    <select id="gridSize" aria-label="Grid Size">
+                        <option value="3">3 x 3</option>
+                        <option value="4">4 x 4</option>
+                    </select>
+                </div>
+
+                <div class="grid-selection hidden" id="difficulty-selection">
+                    <label for="aiDifficulty">Select AI Level:</label>
+                    <select id="aiDifficulty" aria-label="AI Difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="extra-hard">Extra Hard</option>
+                    </select>
+                </div>
+
+                <button id="startGameBtn" class="start-game-btn">Start Game</button>
+            </div>
+        </section>
+
+        <!-- Game Screen -->
+        <section id="game-screen" class="hidden">
+            <div id="scoreboard">
+                <div class="score-box">
+                    <p id="labelX">Player X</p>
+                    <h3 id="scoreX">0</h3>
+                </div>
+                <div class="score-box">
+                    <p>Draws</p>
+                    <h3 id="scoreDraw">0</h3>
+                </div>
+                <div class="score-box">
+                    <p id="labelO">Player O</p>
+                    <h3 id="scoreO">0</h3>
+                </div>
+            </div>
+
+            <div id="status-display">
+                <h2 id="turn-indicator">Player X's Turn</h2>
+            </div>
+
+            <div id="game-board"></div>
+
+            <div class="game-controls">
+                <button id="restartRoundBtn">Restart Round</button>
+                <button id="resetGameBtn">Main Menu</button>
+            </div>
+        </section>
+
+        <!-- Game Over Overlay -->
+        <section id="result-overlay" class="hidden">
+            <div class="result-modal">
+                <h2 id="result-message">Player X Wins! ✨</h2>
+                <button id="playAgainBtn">Play Again</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
