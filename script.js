@@ -87,7 +87,7 @@ function openConfigMode(mode) {
 
 /* 
     Start Game function
-     Initializes game state based on config, 
+     Initializes game state based on configuration, 
      generates board and win conditions, and transitions to game screen. 
     */
 startGameBtn.addEventListener("click", startGame);
