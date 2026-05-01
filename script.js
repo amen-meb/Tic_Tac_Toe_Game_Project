@@ -49,7 +49,9 @@ const resetGameBtn = document.getElementById("resetGameBtn");
 const playAgainBtn = document.getElementById("playAgainBtn");
 
 /* Screen Navigation Logic
-   Using An event listener */
+   Using An event listener 
+   used to attach listeners to DOM elements, such as buttons, divs, or the window object.
+    */
 
 soloBtn.addEventListener("click", () => openConfigMode("single"));
 duoBtn.addEventListener("click", () => openConfigMode("two"));
