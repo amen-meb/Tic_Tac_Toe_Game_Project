@@ -47,7 +47,7 @@ header h1 {
     color: var(--primary);
 }
 
-/* Helper Class to Hide Elements */
+
 .hidden {
     display: none !important;
 }
